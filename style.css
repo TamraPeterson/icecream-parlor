@@ -1,0 +1,18 @@
+body{
+  background-color: secondary,
+  
+}
+
+.selectable{
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.selectable:hover{
+  transform: scale(1.02)
+}
+
+.item-img{
+height: 30vh;
+width: 30vw;
+object-fit: cover;
+}
