@@ -30,7 +30,7 @@
   </style>
 </head>
 
-<body>
+<body class="debug">
   <header class="container-fluid bg-primary text-center p-3 ">
     <h1 class="text-white">🍦 Ice Cream Parlor 🍦</h1>
   </header>
@@ -44,7 +44,7 @@
           <div class="col-12">
             Vessel Type:
           </div>
-          <div class="row p-3" id="vessels">
+          <div class="row p-3 " id="vessels">
             <!-- template for menu item -->
             <div class="menu-item col-6 col-sm-3 selectable" onclick="addToCart('item-name')">
               <img class="item-img img-fluid rounded-top"
@@ -96,6 +96,7 @@
         <div class="row">
           <div class="col-12">
             <h4>Total: $<span id="total">0.00</span></h4>
+            <button id="checkout" class="btn btn-info" onclick="checkout()">Check out</button>
           </div>
         </div>
       </div>

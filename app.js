@@ -70,7 +70,7 @@ function draw(arr, id) {
   for (let i = 0; i < arr.length; i++) {
     const item = arr[i];
     template += `
-  <div class="menu-item col-6 col-sm-3 selectable" onclick="addToCart('${item.id}')">
+  <div class="menu-item col-6 col-sm-3  selectable" onclick="addToCart('${item.id}')">
               <img class="item-img img-fluid rounded-top"
                 src="${item.image}"
                 alt="waffle-cone">
@@ -100,7 +100,7 @@ function drawCart() {
     `
   })
   document.getElementById('cart').innerHTML = template
-  document.getElementById('total').innerText = total
+  document.getElementById('total').innerText = total.toFixed(2)
 }
 
 function addToCart(productId) {
@@ -112,6 +112,13 @@ function addToCart(productId) {
   cart.push(chosenItem)
   console.log(cart)
   total += chosenItem.price
+  drawCart()
+}
+
+function checkout() {
+  alert("Thank you for your purchase")
+  cart = []
+  total = 0
   drawCart()
 }
 
